@@ -1,0 +1,14 @@
+package com.example.hello.model;
+
+import java.time.LocalDate;
+
+public class StockDTO {
+	
+	private Long id;
+	private String name;
+	private Double price;
+	private LocalDate date;
+	private Double variacao;
+	
+
+}

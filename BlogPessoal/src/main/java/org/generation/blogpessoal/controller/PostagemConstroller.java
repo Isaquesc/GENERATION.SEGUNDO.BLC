@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin("*") //ACEITANDO REQUISIÇÕES DE QUALQUER ORIGEM
 public class PostagemConstroller {
 	
-	@Autowired // ADICIONANDO A CLASSE POSTAGEM REPOSITORY DENTRO DO CONTROLLERw
+	@Autowired // ADICIONANDO A CLASSE POSTAGEM REPOSITORY DENTRO DO CONTROLLER
 	private PostagemRepository classerepo;
 	
 	@GetMapping

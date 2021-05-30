@@ -1,0 +1,13 @@
+package org.generation.blogpessoal.model;
+
+import java.util.*;
+
+public class Tema {
+	
+	
+	private long id;
+	private String descricao;
+	
+	private List<Postagem> postagem;
+
+}
