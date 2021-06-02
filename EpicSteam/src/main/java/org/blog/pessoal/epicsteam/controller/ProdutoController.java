@@ -1,8 +1,9 @@
 package org.blog.pessoal.epicsteam.controller;
 
 import java.util.List;
-import org.blog.pessoal.epicsteam.Repository.ProdutoRepository;
+
 import org.blog.pessoal.epicsteam.model.Produto;
+import org.blog.pessoal.epicsteam.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

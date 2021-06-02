@@ -32,6 +32,7 @@ public class Produto {
 	@NotNull
 	private int anoLancamento;
 	
+	@NotNull
 	@ManyToOne
 	@JsonIgnoreProperties("produto")
 	private Categoria categoria;

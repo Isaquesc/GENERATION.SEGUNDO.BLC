@@ -1,4 +1,4 @@
-package org.blog.pessoal.epicsteam.Repository;
+package org.blog.pessoal.epicsteam.repository;
 
 import java.util.List;
 import org.blog.pessoal.epicsteam.model.Produto;

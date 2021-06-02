@@ -2,8 +2,8 @@ package org.blog.pessoal.epicsteam.controller;
 
 import java.util.List;
 
-import org.blog.pessoal.epicsteam.Repository.CategoriaRepository;
 import org.blog.pessoal.epicsteam.model.Categoria;
+import org.blog.pessoal.epicsteam.repository.CategoriaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
