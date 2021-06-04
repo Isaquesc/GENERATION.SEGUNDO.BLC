@@ -1,5 +1,4 @@
 package org.blog.pessoal.epicsteam.model;
-
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;

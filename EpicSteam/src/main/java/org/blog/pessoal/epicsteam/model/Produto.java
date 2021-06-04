@@ -1,5 +1,4 @@
 package org.blog.pessoal.epicsteam.model;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
