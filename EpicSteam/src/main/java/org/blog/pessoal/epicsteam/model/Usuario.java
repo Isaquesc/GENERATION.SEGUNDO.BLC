@@ -1,4 +1,5 @@
-package org.generation.blogpessoal.model;
+package org.blog.pessoal.epicsteam.model;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,7 +11,6 @@ import javax.validation.constraints.Size;
 @Entity
 @Table(name = "tb_usuario")
 public class Usuario {
-    
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -61,3 +61,4 @@ public class Usuario {
 
     
 }
+    

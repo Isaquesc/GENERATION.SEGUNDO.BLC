@@ -1,12 +1,12 @@
-package org.generation.blogpessoal.repository;
+package org.blog.pessoal.epicsteam.repository;
 
 import java.util.*;
-import org.generation.blogpessoal.model.Usuario;
+import org.blog.pessoal.epicsteam.model.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
     public Optional<Usuario> findByUsuario(String usuario);
+    
 }
-public Optional<Usuario> findByUsuario(String usuario);

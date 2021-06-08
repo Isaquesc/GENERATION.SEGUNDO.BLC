@@ -1,9 +1,10 @@
-package org.generation.blogpessoal.controller;
+package org.blog.pessoal.epicsteam.controller;
 
-import java.util.Optional;
-import org.generation.blogpessoal.model.UserLogin;
-import org.generation.blogpessoal.model.Usuario;
-import org.generation.blogpessoal.service.UsuarioService;
+import java.util.*;
+
+import org.blog.pessoal.epicsteam.model.UserLogin;
+import org.blog.pessoal.epicsteam.model.Usuario;
+import org.blog.pessoal.epicsteam.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,15 +23,14 @@ public class UsuarioController {
     private UsuarioService usuarioService;
 
     @PostMapping("/logar")
-    public ResponseEntity<UserLogin> Autentication(@RequestBody Optional<UserLogin> user){
-        return usuarioService.Logar(user)
-        .map(resp -> ResponseEntity.ok(resp))
-        .orElse(ResponseEntity.status(HttpStatus.UNAUTHORIZED).build());
+    public ResponseEntity<UserLogin> Autentication(@RequestBody Optional<UserLogin> user) {
+        return usuarioService.Logar(user).map(resp -> ResponseEntity.ok(resp))
+                .orElse(ResponseEntity.status(HttpStatus.UNAUTHORIZED).build());
     }
 
     @PostMapping("/cadastrar")
-    public ResponseEntity<Usuario> Post(@RequestBody Usuario usuario){
+    public ResponseEntity<Usuario> Post(@RequestBody Usuario usuario) {
         return ResponseEntity.status(HttpStatus.CREATED).body(usuarioService.CadastrarUsuario(usuario));
     }
-    
+
 }
