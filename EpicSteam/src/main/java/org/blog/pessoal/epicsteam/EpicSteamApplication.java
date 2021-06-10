@@ -1,5 +1,5 @@
-package org.blog.pessoal.epicsteam;
 
+package org.blog.pessoal.epicsteam;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

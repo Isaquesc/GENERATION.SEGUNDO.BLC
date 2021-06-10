@@ -1,7 +1,6 @@
 package org.blog.pessoal.epicsteam.seguranca;
 
 import java.util.Collection;
-
 import org.blog.pessoal.epicsteam.model.Usuario;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

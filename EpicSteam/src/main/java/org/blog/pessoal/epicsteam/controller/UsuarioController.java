@@ -1,7 +1,6 @@
 package org.blog.pessoal.epicsteam.controller;
 
 import java.util.*;
-
 import org.blog.pessoal.epicsteam.model.UserLogin;
 import org.blog.pessoal.epicsteam.model.Usuario;
 import org.blog.pessoal.epicsteam.service.UsuarioService;
@@ -30,7 +29,8 @@ public class UsuarioController {
 
     @PostMapping("/cadastrar")
     public ResponseEntity<Usuario> Post(@RequestBody Usuario usuario) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(usuarioService.CadastrarUsuario(usuario));
+        return ResponseEntity.status(HttpStatus.CREATED)
+        .body(usuarioService.CadastrarUsuario(usuario));
     }
 
 }

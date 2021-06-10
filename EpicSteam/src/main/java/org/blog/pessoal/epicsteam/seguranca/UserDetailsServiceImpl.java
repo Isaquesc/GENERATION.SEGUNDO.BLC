@@ -1,5 +1,8 @@
 package org.blog.pessoal.epicsteam.seguranca;
 
+// FAZ UM MEIO DE CAMPO ENTRE A CLASSE USUARIO E A USERDETAILSIMPL
+
+
 import java.util.Optional;
 
 import org.blog.pessoal.epicsteam.model.Usuario;
@@ -10,7 +13,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-@Service
+@Service 
 public class UserDetailsServiceImpl implements UserDetailsService{
 
     @Autowired
