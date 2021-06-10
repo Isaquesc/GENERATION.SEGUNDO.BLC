@@ -31,7 +31,9 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
               // ELE, SEM TOKEN
     protected void configure(HttpSecurity htpp) throws Exception {
         htpp.authorizeRequests().antMatchers("/usuario/logar").permitAll().antMatchers("/usuario/cadastrar").permitAll()
-                .anyRequest().authenticated() // SOLICITANDO TOKEN PARA TUDO QUE NAO SEJA O ENDPOINTS ACIMA
+                .antMatchers("/usuario/atualizar").permitAll().anyRequest().authenticated() // SOLICITANDO TOKEN PARA
+                                                                                            // TUDO QUE NAO SEJA O
+                                                                                            // ENDPOINTS ACIMA
                 .and().httpBasic() // UTILIZANDO O PADRAO BASIC PARA GERAR A CHAVE TOKEN
                 .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS) // INDICAR QUAL É O
                                                                                                   // TIPO DE SESSÃO QUE

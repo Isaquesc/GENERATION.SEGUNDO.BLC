@@ -1,10 +1,10 @@
-package org.blog.pessoal;
+package br.org.generation.agenda;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class HelloWorld1ApplicationTests {
+class AgendaApplicationTests {
 
 	@Test
 	void contextLoads() {

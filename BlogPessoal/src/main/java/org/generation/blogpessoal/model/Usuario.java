@@ -27,6 +27,24 @@ public class Usuario {
     private String senha;
 
 
+    public Usuario(String nome, String usuario, String senha) {
+        
+        this.nome = nome;
+        this.usuario = usuario;
+        this.senha = senha;
+    }
+
+    public Usuario(long id, String nome, String usuario, String senha) {
+        this.id = id;
+        this.nome = nome;
+        this.usuario = usuario;
+        this.senha = senha;
+    }
+    
+    public Usuario() {
+        
+    }
+
     public long getId() {
         return id;
     }
@@ -44,7 +62,7 @@ public class Usuario {
     }
 
     public String getUsuario() {
-        return this.usuario;
+        return usuario;
     }
 
     public void setUsuario(String usuario) {
