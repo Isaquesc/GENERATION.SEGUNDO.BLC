@@ -1,7 +1,6 @@
 package org.generation.blogpessoal.controller;
 
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import org.generation.blogpessoal.model.UserLogin;
 import org.generation.blogpessoal.model.Usuario;
 import org.generation.blogpessoal.repository.UsuarioRepository;

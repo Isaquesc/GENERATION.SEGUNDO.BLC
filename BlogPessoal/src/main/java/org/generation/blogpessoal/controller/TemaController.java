@@ -31,15 +31,15 @@ public class TemaController {
 	}
 
 	@GetMapping("/{id}")
-	public ResponseEntity<Tema> PegarPorId(@PathVariable long ide){
-		return classetema.findById(ide)
+	public ResponseEntity<Tema> PegarPorId(@PathVariable long id){
+		return classetema.findById(id)
 				.map(resp -> ResponseEntity.ok(resp))
 				.orElse(ResponseEntity.notFound().build());
 	}
 	
 	@GetMapping("/nome/{nome}")
-	public ResponseEntity<List<Tema>> PegarPorNome(@PathVariable String name){
-		return ResponseEntity.ok(classetema.findAllByDescricaoContainingIgnoreCase(name));
+	public ResponseEntity<List<Tema>> PegarPorNome(@PathVariable String nome){
+		return ResponseEntity.ok(classetema.findAllByDescricaoContainingIgnoreCase(nome));
 	}
 	
 	@PostMapping

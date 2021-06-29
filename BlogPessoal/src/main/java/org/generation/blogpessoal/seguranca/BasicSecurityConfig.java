@@ -10,6 +10,8 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+//import org.springframework.web.bind.annotation.GetMapping;
+//import org.springframework.web.servlet.ModelAndView;
 
 @EnableWebSecurity
 public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -19,8 +21,18 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override // SUBSCREVENDO UM METODO QUE EXISTE DENTRO DO 'USERDETAUKSSERVICE'
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+
+        auth.inMemoryAuthentication()
+        .withUser("isaquec").password(senhaEncoder().encode("1234")).authorities("ROLE_USER");
+
         auth.userDetailsService(userDetailsService);
     }
+    
+        // @GetMapping
+        // public ModelAndView swaggerUi(){
+        //     return new ModelAndView("redirect:/swagger-ui.html");
+        // } 
+    
 
     @Bean
     public PasswordEncoder senhaEncoder() {
@@ -40,5 +52,5 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
                                                                                                   // VAMOS UTILIZAR
                 .and().cors() // HABILITANDO O CORS
                 .and().csrf().disable(); // DESABILITANDO O CSRF (ESTAMOS UTILIZANDO TODOS AS CONF PADRAO)
-    }
+    }    
 }
