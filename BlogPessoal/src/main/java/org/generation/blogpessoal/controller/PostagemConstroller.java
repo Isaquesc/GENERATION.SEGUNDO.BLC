@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController // DECLANDO A CLASSE COMO CONTROLLER
 @RequestMapping("/postagens")
-@CrossOrigin("*") //ACEITANDO REQUISIÇÕES DE QUALQUER ORIGEM
+@CrossOrigin(origins = "*", allowedHeaders = "*") //ACEITANDO REQUISIÇÕES DE QUALQUER ORIGEM
 public class PostagemConstroller {
 	
 	@Autowired // ADICIONANDO A CLASSE POSTAGEM REPOSITORY DENTRO DO CONTROLLER

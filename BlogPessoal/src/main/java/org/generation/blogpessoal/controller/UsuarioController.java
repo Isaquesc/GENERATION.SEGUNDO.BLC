@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/usuario")
-@CrossOrigin("*")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class UsuarioController {
 
     @Autowired
@@ -54,6 +54,18 @@ public class UsuarioController {
 	@DeleteMapping("/{id}")
 	public void deleteById(@PathVariable long id) {
 		repository.deleteById(id);
+	}
+
+    @GetMapping("/{id}")
+	public ResponseEntity<Usuario> PegarPorId(@PathVariable long id){
+		return repository.findById(id)
+				.map(resp -> ResponseEntity.ok(resp))
+				.orElse(ResponseEntity.notFound().build());
+	}
+
+    @PutMapping
+	public ResponseEntity<Usuario> editar(@RequestBody Usuario usuario){
+		return ResponseEntity.status(HttpStatus.OK).body(repository.save(usuario));
 	}
 }
     
